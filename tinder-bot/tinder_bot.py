@@ -1,6 +1,7 @@
 from selenium import webdriver
 from time import sleep
 import sys 
+from secrets import username, password
 
 class TinderBot():
     def __init__(self):
@@ -30,7 +31,7 @@ class TinderBot():
         
         #email 
         email_in = self.driver.find_element_by_xpath('//*[@id="email"]')
-        email_in.send_keys('username')
+        email_in.send_keys(username)
         
         #password
         pw_in = self.driver.find_element_by_xpath('//*[@id="pass"]')
